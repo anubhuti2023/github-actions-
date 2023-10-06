@@ -1,0 +1,10 @@
+name: Display-Errors
+on:
+  [push,pull_request,issues]
+
+jobs:
+  Logging-errors:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Debugging Display-Errors
+      run: "::error:: Missing semi-colon"
