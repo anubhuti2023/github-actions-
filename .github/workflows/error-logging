@@ -1,6 +1,6 @@
 name: Display-Errors
 on:
-  [push,pull_request,issues]
+  [pull_request]
 
 jobs:
   Logging-errors:
