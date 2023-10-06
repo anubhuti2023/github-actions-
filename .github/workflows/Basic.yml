@@ -1,0 +1,9 @@
+name: Basic-workflow
+on: [push,pull_request]
+
+jobs:
+  run-commands:
+    runs-on: ubuntu-latest
+    steps:
+    - name: list all files
+      run: ls-a
