@@ -1,3 +1,5 @@
+# This Workflow is to create a comment if an issue is opened or Closed on Github
+
 name: Issue_Comment
 on:
   issues:
@@ -8,10 +10,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
      - name: create a comment on an issues
-       run: echo '${{ toJson(github.event) }}' | jq
+       run: echo '${{ toJson(github.event) }}' | jq   #this is a github event to convert our issue specs to a pretty JSON format
        shell: bash
      - name: Create comment
-       uses: peter-evans/create-or-update-comment@v3
+       uses: peter-evans/create-or-update-comment@v3  #custom github action we can use to create a comment on our issues
        with:
           issue-number: ${{ github.event.issue.number }}
           body: |
