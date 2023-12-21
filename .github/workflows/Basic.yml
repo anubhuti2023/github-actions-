@@ -1,9 +1,11 @@
-name: Basic-workflow
-on: [push,pull_request]
+# This is the most basic workflow to give you a hint of how can we use actions to just run a shell command to list all files
+
+name: Basic-workflow  #this is the job name
+on: [push,pull_request] #this means that the workflow will run on push and pull request
 
 jobs:
   run-commands:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest #this is the runner which we need to mention to run some commands it can be linux,Mac Os and Window based.
     steps:
     - name: list all files
       run: ls -a
