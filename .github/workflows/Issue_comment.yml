@@ -1,0 +1,12 @@
+name: Issue_Comment
+on:
+  issues:
+    types: [opened,closed]
+
+jobs:
+  create_issue:
+    runs-on: ubuntu-latest
+    steps:
+     - name: create a comment on an issues
+       run: echo '{{ toJson(github.event) }}' | jq
+       shell: bash
