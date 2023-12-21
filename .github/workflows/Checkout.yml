@@ -3,13 +3,13 @@
 name: hello-world
 on:
   push:
-  workflow_dispatch:
+  workflow_dispatch: #using this event we can maually trigger a workflow acc to our needs
 
 jobs:
   Using-Checkout:
     runs-on: ubuntu-latest
     steps:
-     - uses: actions/checkout@v1
+     - uses: actions/checkout@v1  #this is a github based action which you can use to checkout to a specific repository
      - name: hello world jobs
        run: echo "hello world"
        shell: bash
