@@ -1,0 +1,14 @@
+name: Issue_Comment
+on: [push,pull_request,issues]
+  
+
+jobs:
+  Using_events:
+    runs-on: ubuntu-latest
+    steps:
+         - run: |
+             echo $GITHUB_SHA
+             echo $GITHUB_REF
+       
+         - uses: action/checkout@v2
+       
