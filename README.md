@@ -25,3 +25,5 @@ You can create end to end CI and CD automated builds with Github Actions .<br>
 CI-build: your CI build should have the unit tests or any kind of tests you want to run for your project <br> 
 CD-build: Your CD build should have the code may it be a docker image or any kind of helm deployments where you deploy to lower or higher envrionments based on your needs which would ensure Continuous Deployment
 
+For learning Github-Actions extensively ,you can go through this course available on Udemy -> `https://fico.udemy.com/course/github-actions/`
+
