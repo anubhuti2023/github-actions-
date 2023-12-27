@@ -1,7 +1,7 @@
 name: Workflow-run
 on:
   workflow_run:
-    workflows: [Checkout]
+    workflows: [hello-world]
     types: [completed]
 
 jobs: 
