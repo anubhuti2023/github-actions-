@@ -1,0 +1,11 @@
+name: Workflow-run
+on:
+  workflow_run:
+    workflows: [Checkout]
+    types: [completed]
+
+jobs: 
+  display-string:
+    runs-on: ubuntu-latest
+    steps:
+     - run: echo "I was triggered because of the 'Checkout Workflow' was completed"
