@@ -1,0 +1,21 @@
+# Workflow to close the stale issues
+name: Close Stale issues
+on:
+  schedule:                      # This event trigger is used to run a job on a specific scehdule
+    - cron: "* * * * *"          # This will trigger the job to run at every minute.
+
+jobs:
+  close-issues:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      pull-requests: write
+    steps:
+      - uses: actions/stale@v5    #this is the github action for marking the issues or PRS as stale
+        with:
+          days-before-issue-stale: 1    # days-before-issue-stale to the number of days without activity before the actions/stale
+          days-before-issue-close: 2    # days-before-issue-close to the number of days without activity before the actions/stale action closes an issue.
+          stale-issue-label: "stale"
+          stale-issue-message: "This issue is stale because it has been open for 30 days with no activity."
+          close-issue-message: "This issue was closed because it has been inactive for 14 days since being marked as stale."
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
